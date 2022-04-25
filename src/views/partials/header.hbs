@@ -1,0 +1,30 @@
+{{#if name}}
+  hello,
+  {{name}}
+{{/if}}
+
+<nav>
+  <ul>
+    <li>
+      <a href="/">Main page</a>
+    </li>
+    <li>
+      <a href="/secret">Private page</a>
+    </li>
+    {{#if name}}
+      <li>
+        <a href="/auth/signout">Sign out</a>
+      </li>
+    {{else}}
+
+      <li>
+        <a href="/auth/signup">Sign Up</a>
+      </li>
+      <li>
+        <a href="/auth/signin">Sign In</a>
+      </li>
+
+    {{/if}}
+
+  </ul>
+</nav>
